@@ -12,7 +12,7 @@ def get_exchange_rate(target1, target2):
     # BeautifulSoup 라이브러리를 이용하여 html로 보기 값을 찾기 좋게 한다.
     content = BeautifulSoup(response.content, 'html.parser')
     # 마지막 환율 정보를 찾는다.
-    containers = content.find('span', {'data-test' : 'instrument-price-last'})
+    containers = content.find('span', {'data-test': 'instrument-price-last'})
     print(containers.text)
 
 # 달러-원화 비율을 크롤링하여 출력
