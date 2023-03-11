@@ -6,7 +6,8 @@ import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 file_path = '나의텍스트.txt'
-with open(file_path, 'rt', encoding='UTF8') as f:
+# 파일을 f의 이름으로 오픈. 한글로 작성된 파일이므로 'rt', UTF8형식으로 인코딩
+with open(file_path, 'rt', encoding='UTF8') as f:       # with는 파일을 열고 종료되면 자동으로 파일을 닫음
     read_file = f.read()
 
 tts = gTTS(text=read_file, lang='ko')
